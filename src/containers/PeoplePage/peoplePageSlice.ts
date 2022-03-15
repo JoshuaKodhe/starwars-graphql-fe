@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { IPeoplePageState, Status } from './types';
+import { IPeoplePageState, Status } from '../types';
 
 const initialState: IPeoplePageState = {
   data: null,

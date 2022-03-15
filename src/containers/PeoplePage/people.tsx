@@ -3,10 +3,11 @@ import React from 'react';
 import { useAppDispatch, useAppSelector } from '../../app/hooks';
 import peopleService from '../../services/peopleService';
 import { setPeople, setRequestStatus } from './peoplePageSlice';
-import { IPeopleForHome, Status } from './types';
+import { IPeopleForHome, Status } from '../types';
 
 import { PeopleList } from './peopleList';
 import { selectPage } from './selectors';
+import styled from 'styled-components';
 
 const actionDispatch = (dispatch: Dispatch) => ({
   setPeople: (data: IPeopleForHome) => dispatch(setPeople(data)),
@@ -35,7 +36,17 @@ const People = () => {
     fetchPeople();
   }, [setPeople, setRequestStatus, page]);
 
-  return <PeopleList />;
+  return (
+    <>
+      <Heading>Welcome to starwars</Heading>
+      <PeopleList />;
+    </>
+  );
 };
 
 export default People;
+
+const Heading = styled.h3`
+  margin-top: 0.8em;
+  text-align: center;
+`;

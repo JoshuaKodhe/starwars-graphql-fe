@@ -10,6 +10,7 @@ import {
 import { setPage } from './peoplePageSlice';
 import PersonCard from './person-card';
 import { Layout, Result } from '../../components';
+import styled from 'styled-components';
 
 const actionDispatch = (dispatch: Dispatch) => ({
   setPage: (page: number) => dispatch(setPage(page)),

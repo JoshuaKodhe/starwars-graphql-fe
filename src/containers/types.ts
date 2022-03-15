@@ -43,6 +43,8 @@ export interface IPeoplePageState {
   error: string | null;
 }
 
-export interface RootState {
-  people: IPeoplePageState;
+export interface IPersonPageState {
+  person: IPerson | null;
+  request_status: Status;
+  error: string | null;
 }

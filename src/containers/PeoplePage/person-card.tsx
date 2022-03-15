@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { IPerson } from './types';
+import { IPerson } from '../types';
+import { Link } from 'react-router-dom';
 
 const PersonCard: React.FC<IPerson> = ({
   name,
@@ -10,7 +11,7 @@ const PersonCard: React.FC<IPerson> = ({
   homeworld,
 }) => {
   return (
-    <CardContainer>
+    <CardContainer to={`/details/${name}`}>
       <CardContent>
         <CardBody>
           <CardTitle>{name}</CardTitle>
@@ -30,7 +31,7 @@ const PersonCard: React.FC<IPerson> = ({
 
 export default PersonCard;
 
-const CardContainer = styled.div`
+const CardContainer = styled(Link)`
   border-radius: 5px;
   color: '#191C23';
   background-size: cover;
@@ -58,6 +59,7 @@ const CardContainer = styled.div`
   }
   cursor: pointer;
   text-decoration: none;
+  color: black;
 `;
 
 const CardContent = styled.div`
