@@ -34,7 +34,7 @@ export const PersonDetails: React.FC<IPerson> = ({
           Terrain:{homeworld?.terrain}
         </PersonInfoDetailsDesc>
         <PersonInfoDetailsDesc>
-          Population:{homeworld?.population}a
+          Population:{homeworld?.population}
         </PersonInfoDetailsDesc>
       </HomeWorldInfo>
     </PersonDetailsContaier>

@@ -18,7 +18,6 @@ export const PersonPageDetails = () => {
   const request_status = useAppSelector(selectPersonRequestStatus);
   const person = useAppSelector(selectPersonDetails);
 
-  console.log(person);
   return (
     <ContentSection>
       <Result loading={request_status} error={error} data={person}>
