@@ -38,7 +38,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "preinstall": "rm -rf /dist && build"
+    "preinstall": "rm -rf /build && build"
   },
   "eslintConfig": {
     "extends": "react-app"
